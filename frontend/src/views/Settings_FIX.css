@@ -1,0 +1,52 @@
+/* 添加到 Settings.vue 的 <style scoped> 部分 */
+
+/* 确保网格布局顶部对齐 */
+.settings-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;  /* 左右间距加大到 40px */
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: start;  /* 关键：顶部对齐 */
+}
+
+/* 左侧内容 */
+.settings-content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 第一个设置卡片紧贴顶部 */
+.settings-content > .settings-section:first-child {
+  margin-top: 0 !important;
+}
+
+/* 右侧边栏 */
+.user-sidebar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;  /* 上下卡片间距加大到 32px */
+  align-self: start;  /* 关键：顶部对齐 */
+  margin-top: 0 !important;  /* 强制无上边距 */
+}
+
+/* 设置卡片增加高度 */
+.settings-section {
+  padding: 40px 35px;  /* 上下 40px，左右 35px */
+  min-height: 220px;   /* 增加最小高度 */
+}
+
+/* 用户卡片增加高度 */
+.user-card {
+  padding: 45px 30px;  /* 上下 45px，左右 30px */
+  min-height: 300px;   /* 增加最小高度 */
+}
+
+/* RAG 卡片增加高度 */
+.rag-card {
+  padding: 40px 30px;  /* 上下 40px，左右 30px */
+  min-height: 260px;   /* 增加最小高度 */
+}

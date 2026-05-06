@@ -1,0 +1,13 @@
+{
+  "api_base_url": "https://www.9235.net/api",
+  "token": "",
+  "default_data_scope": "cn",
+  "default_page_size": 10,
+  "max_records": 1000,
+  "timeout_seconds": 30,
+  "download_dir": "./downloads",
+  "enable_cache": false,
+  "cache_ttl_seconds": 3600,
+  "retry_times": 3,
+  "retry_delay_seconds": 1
+}

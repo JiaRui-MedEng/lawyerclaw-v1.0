@@ -1,0 +1,244 @@
+/* ============================================================
+   上传/入库进度面板 - 共享样式
+   用于 Chat.vue 存入知识库弹窗 和 Settings.vue RAG 上传
+   ============================================================ */
+
+/* ---------- 阶段指示器 ---------- */
+.upload-stages {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 24px;
+  padding: 0 16px;
+}
+
+.upload-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #A09888;
+  transition: all 0.35s ease;
+  min-width: 64px;
+}
+
+.upload-stage .stage-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #E0D9D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #fff;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.upload-stage.active {
+  color: #C8A96E;
+  font-weight: 600;
+}
+
+.upload-stage.active .stage-dot {
+  background: #C8A96E;
+  box-shadow: 0 0 0 4px rgba(200, 169, 110, 0.15);
+  transform: scale(1.05);
+}
+
+.upload-stage.done {
+  color: #67c23a;
+  font-weight: 600;
+}
+
+.upload-stage.done .stage-dot {
+  background: #67c23a;
+  box-shadow: 0 0 0 4px rgba(103, 194, 58, 0.12);
+}
+
+.upload-stage-line {
+  width: 56px;
+  height: 3px;
+  background: #E0D9D0;
+  margin: 14px 12px 0;
+  border-radius: 2px;
+  transition: background 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-stage-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: #67c23a;
+  border-radius: 2px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.upload-stage-line.done::after {
+  width: 100%;
+}
+
+/* ---------- 进度消息 ---------- */
+.upload-progress-msg {
+  font-size: 13px;
+  color: #6B6156;
+  margin: 14px 0 0 0;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- 逐文件状态列表 ---------- */
+.upload-file-status-list {
+  margin-top: 16px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-right: 4px;
+}
+
+.upload-file-status-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.upload-file-status-list::-webkit-scrollbar-thumb {
+  background: #D5CEC4;
+  border-radius: 2px;
+}
+
+.upload-file-status-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  background: #FAFAF8;
+  border: 1px solid #EDE8DF;
+  transition: all 0.2s ease;
+}
+
+.upload-file-status-item:hover {
+  background: #F5F2EE;
+  border-color: #D5CEC4;
+  transform: translateX(2px);
+}
+
+.upload-file-status-item i {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.upload-file-status-item .file-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #3A3530;
+  font-weight: 500;
+}
+
+.upload-file-status-item .file-state-text {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: #F0EBE3;
+  color: #8A7D6B;
+  transition: all 0.2s ease;
+}
+
+/* pending */
+.upload-file-status-item.pending {
+  opacity: 0.55;
+}
+
+.upload-file-status-item.pending i {
+  color: #A09888;
+}
+
+/* uploading / ingesting */
+.upload-file-status-item.uploading i,
+.upload-file-status-item.ingesting i {
+  color: #C8A96E;
+}
+
+.upload-file-status-item.uploading .file-state-text,
+.upload-file-status-item.ingesting .file-state-text {
+  background: #FDF6E8;
+  color: #C8A96E;
+}
+
+/* success */
+.upload-file-status-item.success {
+  background: #F6FEF6;
+  border-color: #D1F2D1;
+}
+
+.upload-file-status-item.success i {
+  color: #67c23a;
+}
+
+.upload-file-status-item.success .file-state-text {
+  background: #E8F8E8;
+  color: #52c41a;
+}
+
+/* fail */
+.upload-file-status-item.fail {
+  background: #FFF5F5;
+  border-color: #FAD2D2;
+}
+
+.upload-file-status-item.fail i {
+  color: #f56c6c;
+}
+
+.upload-file-status-item.fail .file-state-text {
+  background: #FDE8E8;
+  color: #f56c6c;
+}
+
+/* ---------- Element UI 进度条自定义 ---------- */
+.upload-progress-custom .el-progress-bar__outer {
+  border-radius: 8px !important;
+  background-color: #EDE8DF !important;
+  height: 20px !important;
+}
+
+.upload-progress-custom .el-progress-bar__inner {
+  border-radius: 8px !important;
+  background: linear-gradient(90deg, #C8A96E 0%, #D4BA8A 100%) !important;
+  transition: width 0.4s ease;
+}
+
+.upload-progress-custom.is-success .el-progress-bar__inner {
+  background: linear-gradient(90deg, #67c23a 0%, #85ce61 100%) !important;
+}
+
+.upload-progress-custom.is-warning .el-progress-bar__inner {
+  background: linear-gradient(90deg, #e6a23c 0%, #ebb563 100%) !important;
+}
+
+.upload-progress-custom.is-exception .el-progress-bar__inner {
+  background: linear-gradient(90deg, #f56c6c 0%, #f78989 100%) !important;
+}
+
+.upload-progress-custom .el-progress__text {
+  min-width: 44px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #6B6156 !important;
+  text-align: right;
+}

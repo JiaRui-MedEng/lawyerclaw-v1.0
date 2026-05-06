@@ -1,0 +1,698 @@
+/**
+ * 深色模式主题变量定义
+ * Dark Mode Theme Variables for 百佑 LawyerClaw
+ * 
+ * 配色方案：
+ * - 左右侧边栏：#0D0D0D
+ * - 中心区域：#141414
+ * - 按钮：#C8A96E
+ * - 内容文字：#E8E8E8
+ * - 暗色文字：#AAAAAA
+ */
+
+/* ====== 深色模式主题变量 ====== */
+[data-theme='dark'] {
+  /* 主色调 - 金色按钮 */
+  --primary: #C8A96E;
+  --primary-container: #8B7355;
+  --on-primary: #141414;
+  --on-primary-fixed-variant: #E8E8E8;
+
+  /* 表面色 - 左右侧边栏 */
+  --surface: #141414;
+  --surface-container-low: #0D0D0D;
+  --surface-container-lowest: #1A1A1A;
+  --surface-container-high: #242424;
+  --surface-container-highest: #2E2E2E;
+
+  /* 表面文本颜色 */
+  --on-surface: #E8E8E8;
+  --on-surface-variant: #AAAAAA;
+
+  /* 容器色 */
+  --secondary-container: #2A2A2A;
+  --error-container: #3D1A1A;
+  --outline-variant: #333333;
+  --outline: #555555;
+
+  /* 背景色 */
+  --background: #0D0D0D;
+  --on-background: #E8E8E8;
+
+  /* 特殊状态色 */
+  --error: #FF6B6B;
+  --success: #4CAF50;
+  --warning: #FF9800;
+  --info: #2196F3;
+
+  /* 滚动条 */
+  --scrollbar-track: #0D0D0D;
+  --scrollbar-thumb: #333333;
+  --scrollbar-thumb-hover: #444444;
+
+  /* 边框色 */
+  --border-color: #242424;
+  --border-light: #1A1A1A;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.7);
+  --shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.8);
+
+  /* 代码块背景 */
+  --code-background: #1A1A1A;
+  --code-border: #333333;
+
+  /* 输入框 */
+  --input-background: #1A1A1A;
+  --input-border: #333333;
+  --input-focus-border: #C8A96E;
+
+  /* 悬停状态 */
+  --hover-overlay: rgba(200, 169, 110, 0.1);
+  --selected-overlay: rgba(200, 169, 110, 0.2);
+
+  /* 分隔线 */
+  --divider: #242424;
+}
+
+/* ====== 深色模式下的组件样式覆盖 ====== */
+
+[data-theme='dark'] body {
+  background: var(--background);
+  color: var(--on-background);
+}
+
+[data-theme='dark'] #app {
+  background: var(--background);
+}
+
+/* 导航栏深色模式 - 左右侧边栏 #0D0D0D */
+[data-theme='dark'] .col-nav {
+  background: #0D0D0D;
+  border-right: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .session-item:hover {
+  background: var(--hover-overlay);
+}
+
+[data-theme='dark'] .session-item.active,
+[data-theme='dark'] .session-item.selected {
+  background: var(--selected-overlay);
+  border-left-color: var(--primary);
+}
+
+[data-theme='dark'] .user-center:hover {
+  background: var(--hover-overlay);
+}
+
+[data-theme='dark'] .user-avatar {
+  background: linear-gradient(135deg, var(--primary), var(--primary-container));
+  color: #141414;
+}
+
+/* 主工作区深色模式 - 中心区域 #141414 */
+[data-theme='dark'] .col-main {
+  background: #141414;
+}
+
+/* 文件浏览器深色模式 - 左右侧边栏 #0D0D0D */
+[data-theme='dark'] .col-files {
+  background: #0D0D0D;
+  border-left: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .files-title {
+  color: var(--primary);
+}
+
+/* 按钮深色模式 - 按钮 #C8A96E */
+[data-theme='dark'] .btn-new-session {
+  background: #C8A96E;
+  color: #141414;
+}
+
+[data-theme='dark'] .btn-new-session:hover {
+  background: #D4B87A;
+}
+
+[data-theme='dark'] .btn-edit-sessions {
+  border-color: var(--outline);
+  color: var(--on-surface-variant);
+}
+
+[data-theme='dark'] .btn-edit-sessions:hover {
+  background: var(--hover-overlay);
+  border-color: var(--primary);
+}
+
+[data-theme='dark'] .btn-edit-sessions.active {
+  background: #C8A96E;
+  border-color: #C8A96E;
+  color: #141414;
+}
+
+[data-theme='dark'] .btn-delete-batch {
+  background: var(--error-container);
+  color: var(--error);
+}
+
+[data-theme='dark'] .btn-delete-batch:hover {
+  background: rgba(255, 107, 107, 0.2);
+}
+
+[data-theme='dark'] .btn-cancel-edit {
+  background: var(--surface-container-high);
+  color: var(--on-surface);
+}
+
+[data-theme='dark'] .btn-cancel-edit:hover {
+  background: var(--surface-container-highest);
+}
+
+/* 聊天界面深色模式 */
+[data-theme='dark'] .chat-view {
+  background: #141414;
+}
+
+[data-theme='dark'] .empty-state {
+  background: #141414;
+}
+
+[data-theme='dark'] .empty-title {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .empty-subtitle {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .message-bubble {
+  background: var(--primary-container);
+  color: var(--on-primary-fixed-variant);
+}
+
+[data-theme='dark'] .bubble-ai {
+  background: #1A1A1A;
+  border-color: var(--border-color);
+  color: #E8E8E8;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme='dark'] .bubble-ai :deep(strong) {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .bubble-ai :deep(pre) {
+  background: var(--code-background);
+  border: 1px solid var(--code-border);
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .bubble-ai :deep(code) {
+  background: var(--code-background);
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .bubble-ai :deep(blockquote) {
+  border-left-color: var(--primary);
+  background: var(--surface-container-high);
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .ai-label {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .time,
+[data-theme='dark'] .message-time {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .actions button {
+  background: var(--surface-container-high);
+  border-color: var(--border-color);
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .actions button:hover {
+  background: var(--hover-overlay);
+  border-color: var(--primary);
+}
+
+[data-theme='dark'] .input-area {
+  background: #141414;
+  border-top-color: var(--border-color);
+}
+
+[data-theme='dark'] .input-box {
+  background: var(--input-background);
+  border-color: var(--input-border);
+}
+
+[data-theme='dark'] .input-field {
+  color: #E8E8E8;
+  background: transparent;
+}
+
+[data-theme='dark'] .input-field::placeholder {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .attach-btn {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .attach-btn:hover {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .send-btn {
+  background: #C8A96E;
+}
+
+[data-theme='dark'] .send-btn:hover:not(:disabled) {
+  background: #D4B87A;
+}
+
+[data-theme='dark'] .send-btn:disabled {
+  background: var(--outline);
+}
+
+/* 设置页面深色模式 */
+[data-theme='dark'] .settings-view {
+  background: #141414;
+}
+
+[data-theme='dark'] .settings-title {
+  color: var(--primary);
+}
+
+[data-theme='dark'] .settings-section {
+  background: #1A1A1A;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme='dark'] .section-title {
+  color: var(--primary);
+  border-bottom-color: var(--divider);
+}
+
+[data-theme='dark'] .setting-label {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .setting-value {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .setting-hint {
+  background: var(--surface-container-high);
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .setting-select {
+  background: var(--input-background);
+  color: #E8E8E8;
+  border: 1px solid var(--input-border);
+}
+
+[data-theme='dark'] .setting-select:focus {
+  border-color: var(--input-focus-border);
+}
+
+[data-theme='dark'] .setting-slider {
+  accent-color: var(--primary);
+}
+
+[data-theme='dark'] .btn-save {
+  background: #C8A96E;
+  color: #141414;
+}
+
+[data-theme='dark'] .btn-save:hover {
+  background: #D4B87A;
+}
+
+[data-theme='dark'] .btn-reset {
+  background: var(--surface-container-high);
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .btn-reset:hover {
+  background: var(--surface-container-highest);
+}
+
+[data-theme='dark'] .user-card {
+  background: #1A1A1A;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme='dark'] .user-name {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .user-email,
+[data-theme='dark'] .user-hint {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .user-stats {
+  background: var(--surface-container-high);
+}
+
+[data-theme='dark'] .stat-value {
+  color: var(--primary);
+}
+
+[data-theme='dark'] .stat-label {
+  color: #AAAAAA;
+}
+
+/* Element UI 深色模式覆盖 */
+[data-theme='dark'] .el-dialog {
+  background: #1A1A1A;
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-dialog__title {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-dialog__body {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-input__inner {
+  background: var(--input-background);
+  border-color: var(--input-border);
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-input__inner:focus {
+  border-color: var(--input-focus-border);
+}
+
+[data-theme='dark'] .el-input__inner::placeholder {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .el-button--primary {
+  background: #C8A96E !important;
+  border: none !important;
+  color: #141414 !important;
+}
+
+[data-theme='dark'] .el-button--primary:hover {
+  background: #D4B87A !important;
+}
+
+[data-theme='dark'] .el-message-box {
+  background: #1A1A1A;
+  border: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .el-message-box__title {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-message-box__content {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .el-notification {
+  background: #1A1A1A;
+  border: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .el-notification__title {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-notification__content {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .el-table {
+  background: #1A1A1A;
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-table th {
+  background: var(--surface-container-high);
+  color: #E8E8E8;
+  border-color: var(--border-color);
+}
+
+[data-theme='dark'] .el-table td {
+  border-color: var(--border-color);
+}
+
+[data-theme='dark'] .el-table--striped .el-table__body tr.el-table__row--striped td {
+  background: #0D0D0D;
+}
+
+[data-theme='dark'] .el-table--enable-row-hover .el-table__body tr:hover > td {
+  background: var(--hover-overlay);
+}
+
+[data-theme='dark'] .el-select-dropdown {
+  background: #1A1A1A;
+  border: 1px solid var(--border-color);
+}
+
+[data-theme='dark'] .el-select-dropdown__item {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-select-dropdown__item:hover {
+  background: var(--hover-overlay);
+}
+
+[data-theme='dark'] .el-select-dropdown__item.selected {
+  color: var(--primary);
+}
+
+[data-theme='dark'] .el-tag {
+  background: var(--surface-container-high);
+  border-color: var(--border-color);
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .el-tag--success {
+  background: rgba(76, 175, 80, 0.2);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+[data-theme='dark'] .el-tag--danger {
+  background: rgba(255, 107, 107, 0.2);
+  border-color: var(--error);
+  color: var(--error);
+}
+
+[data-theme='dark'] .el-tabs__item {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .el-tabs__item.is-active {
+  color: var(--primary);
+}
+
+[data-theme='dark'] .el-tabs__active-bar {
+  background-color: var(--primary);
+}
+
+[data-theme='dark'] .el-tabs__nav-wrap::after {
+  background-color: var(--divider);
+}
+
+/* 认证标签页深色模式 */
+[data-theme='dark'] .auth-tabs {
+  border-bottom-color: var(--divider);
+}
+
+[data-theme='dark'] .auth-tab {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .auth-tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* 文件节点深色模式 */
+[data-theme='dark'] .file-node {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .file-node:hover {
+  background: var(--hover-overlay);
+}
+
+[data-theme='dark'] .file-node.selected {
+  background: var(--selected-overlay);
+}
+
+/* 空状态提示深色模式 */
+[data-theme='dark'] .empty-hint {
+  color: #AAAAAA;
+}
+
+/* 会话元信息深色模式 */
+[data-theme='dark'] .session-title {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .session-meta,
+[data-theme='dark'] .session-time {
+  color: #AAAAAA;
+}
+
+/* 用户信息深色模式 */
+[data-theme='dark'] .user-name {
+  color: #E8E8E8;
+}
+
+[data-theme='dark'] .user-plan {
+  color: #AAAAAA;
+}
+
+/* 批量操作栏深色模式 */
+[data-theme='dark'] .batch-actions {
+  border-top-color: var(--divider);
+  background: #0D0D0D;
+}
+
+/* 工具调用状态深色模式 */
+[data-theme='dark'] .tool-status {
+  background: var(--surface-container-high);
+  border-left-color: var(--primary);
+}
+
+[data-theme='dark'] .tool-item.running {
+  color: var(--info);
+}
+
+[data-theme='dark'] .tool-item.success {
+  color: var(--success);
+}
+
+[data-theme='dark'] .tool-item.error {
+  color: var(--error);
+}
+
+/* 技能卡片深色模式 */
+[data-theme='dark'] .skills-card {
+  background: linear-gradient(135deg, #2A2A2A 0%, #333333 100%);
+  box-shadow: var(--shadow-md);
+}
+
+[data-theme='dark'] .skill-tag {
+  background: rgba(200, 169, 110, 0.2);
+}
+
+[data-theme='dark'] .skill-tag:hover {
+  background: rgba(200, 169, 110, 0.3);
+}
+
+/* 加载动画深色模式 */
+[data-theme='dark'] .loading-spinner {
+  border-color: var(--outline);
+  border-top-color: var(--primary);
+}
+
+[data-theme='dark'] .loading-text {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .loading-dots span {
+  background: #C8A96E;
+}
+
+/* 错误文本深色模式 */
+[data-theme='dark'] .error-text {
+  color: var(--error);
+}
+
+/* RAG 标签深色模式 */
+[data-theme='dark'] .rag-tag-on {
+  background: var(--success);
+  color: #fff;
+}
+
+[data-theme='dark'] .rag-tag-triggered {
+  background: var(--warning);
+  color: #fff;
+}
+
+[data-theme='dark'] .rag-tag-off {
+  background: var(--surface-container-high);
+  color: #AAAAAA;
+}
+
+/* 滚动条深色模式 */
+[data-theme='dark'] ::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background: #333333;
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
+  background: #444444;
+}
+
+/* RAG 卡片深色模式 */
+[data-theme='dark'] .rag-card {
+  background: #1A1A1A;
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme='dark'] .rag-card-header {
+  border-bottom-color: var(--divider);
+}
+
+[data-theme='dark'] .rag-card-title {
+  color: var(--primary);
+}
+
+[data-theme='dark'] .rag-stat {
+  background: var(--surface-container-high);
+}
+
+[data-theme='dark'] .rag-stat-value {
+  color: var(--primary);
+}
+
+[data-theme='dark'] .rag-stat-label {
+  color: #AAAAAA;
+}
+
+[data-theme='dark'] .rag-card-hint {
+  color: #AAAAAA;
+}
+
+/* 用户侧边栏按钮深色模式 */
+[data-theme='dark'] .user-sidebar .el-button.el-button--primary {
+  background: #C8A96E !important;
+  border: none !important;
+  color: #141414 !important;
+}
+
+[data-theme='dark'] .user-sidebar .el-button.el-button--primary:hover {
+  background: #D4B87A !important;
+}
+
+[data-theme='dark'] .user-sidebar .el-button.el-button--danger {
+  background: var(--error-container) !important;
+  border: none !important;
+  color: var(--error) !important;
+}
+
+[data-theme='dark'] .user-sidebar .el-button.el-button--danger:hover {
+  background: rgba(255, 107, 107, 0.3) !important;
+}

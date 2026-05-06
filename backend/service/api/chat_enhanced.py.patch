@@ -1,0 +1,45 @@
+# 修复工具重复调用问题
+
+在 chat_enhanced.py 的工具调用循环中添加去重逻辑：
+
+## 修改位置：第 220 行附近
+
+在 `while iteration < max_iterations:` 循环内，添加：
+
+```python
+# ⭐ 新增：工具调用去重
+called_tools = []  # 记录已调用的工具
+
+# 在 while 循环内，执行工具前添加：
+tool_key = f"{tool_name}:{json.dumps(tool_args, sort_keys=True)}"
+if tool_key in called_tools:
+    logger.warning(f"[Stream+Tools] ⚠️ 工具 {tool_name} 已被调用，跳过重复调用")
+    continue
+called_tools.append(tool_key)
+```
+
+## 或者修改 legal_search 返回更详细的结果
+
+在 legal_tools.py 中，让 legal_search 返回更结构化的结果：
+
+```python
+return ToolResult(
+    success=True,
+    content=f"""## 法律检索结果
+
+### 检索查询
+- 关键词：{query}
+- 类别：{category}
+- 来源：Tavily AI 搜索
+
+### 检索结果（共{len(results)}条）
+
+{formatted_results}
+
+---
+**检索时间**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+**数据来源**: 互联网公开信息（限定政府官网）
+""",
+    data=results
+)
+```

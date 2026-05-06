@@ -1,0 +1,35 @@
+/* 缩窄卡片 + 增大间距的完整 CSS 方案 */
+
+/* 1. 调整网格布局 */
+.settings-layout {
+  display: grid;
+  grid-template-columns: 1.8fr 0.9fr;  /* 缩窄比例 */
+  gap: 60px;  /* 进一步增大左右间距 */
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* 2. 缩窄设置卡片 */
+.settings-section {
+  padding: 35px 30px;  /* 左右内边距从 35px 减少到 30px */
+  min-height: 220px;
+}
+
+/* 3. 缩窄用户卡片 */
+.user-card {
+  padding: 40px 25px;  /* 左右内边距从 30px 减少到 25px */
+  min-height: 300px;
+}
+
+/* 4. 缩窄 RAG 卡片 */
+.rag-card {
+  padding: 35px 25px;  /* 左右内边距从 30px 减少到 25px */
+  min-height: 260px;
+}
+
+/* 5. 确保顶部对齐仍然有效 */
+.user-sidebar {
+  margin-top: 50px;  /* 保持与左侧第一个卡片对齐 */
+  gap: 32px;
+}
