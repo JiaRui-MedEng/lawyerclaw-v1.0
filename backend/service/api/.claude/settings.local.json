@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.py$\")",
+      "Bash(xargs ls:*)",
+      "Bash(find D:\\\\Projects\\\\Pycharm\\\\lawyerclaw\\\\backend:*)",
+      "Read(//d/Projects/Openclaw_workspace/**)"
+    ]
+  }
+}

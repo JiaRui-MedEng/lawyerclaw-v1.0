@@ -1,0 +1,146 @@
+{
+  "installed_at": "2026-04-13T10:42:36.619987",
+  "source_directory": "/mnt/d/Projects/Pycharm/lawyerclaw/skills-zip",
+  "total_installed": 23,
+  "skills": [
+    {
+      "name": "afrexai-contract-analyzer",
+      "source": "afrexai-contract-analyzer-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/afrexai-contract-analyzer",
+      "installed_at": "2026-04-13T10:42:33.964764"
+    },
+    {
+      "name": "ai-writing-assistant-cn-payment",
+      "source": "ai-writing-assistant-cn-payment-1.0.1.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/ai-writing-assistant-cn-payment",
+      "installed_at": "2026-04-13T10:42:34.015279"
+    },
+    {
+      "name": "china-legal-query",
+      "source": "china-legal-query-1.0.2.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/china-legal-query",
+      "installed_at": "2026-04-13T10:42:34.051044"
+    },
+    {
+      "name": "content-writer",
+      "source": "content-writer-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/content-writer",
+      "installed_at": "2026-04-13T10:42:34.122431"
+    },
+    {
+      "name": "contract-generator",
+      "source": "contract-generator-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/contract-generator",
+      "installed_at": "2026-04-13T10:42:34.203277"
+    },
+    {
+      "name": "contract-review-pro",
+      "source": "contract-review-pro-1.0.2.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/contract-review-pro",
+      "installed_at": "2026-04-13T10:42:34.286198"
+    },
+    {
+      "name": "dellight-content-marketing",
+      "source": "dellight-content-marketing-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/dellight-content-marketing",
+      "installed_at": "2026-04-13T10:42:34.376189"
+    },
+    {
+      "name": "internet-marketing",
+      "source": "internet-marketing-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/internet-marketing",
+      "installed_at": "2026-04-13T10:42:34.411649"
+    },
+    {
+      "name": "lawsuit-fee-calc",
+      "source": "lawsuit-fee-calc-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/lawsuit-fee-calc",
+      "installed_at": "2026-04-13T10:42:34.479566"
+    },
+    {
+      "name": "legal-doc-writer",
+      "source": "legal-doc-writer-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/legal-doc-writer",
+      "installed_at": "2026-04-13T10:42:34.578920"
+    },
+    {
+      "name": "litigation-jurisdiction",
+      "source": "litigation-jurisdiction-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/litigation-jurisdiction",
+      "installed_at": "2026-04-13T10:42:34.776292"
+    },
+    {
+      "name": "litigation-response",
+      "source": "litigation-response-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/litigation-response",
+      "installed_at": "2026-04-13T10:42:34.918258"
+    },
+    {
+      "name": "marketing-mode",
+      "source": "marketing-mode-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/marketing-mode",
+      "installed_at": "2026-04-13T10:42:35.068011"
+    },
+    {
+      "name": "marketing-strategy-pmm",
+      "source": "marketing-strategy-pmm-2.1.1.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/marketing-strategy-pmm",
+      "installed_at": "2026-04-13T10:42:35.246481"
+    },
+    {
+      "name": "news-aggregator",
+      "source": "news-aggregator-1.0.3.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/news-aggregator",
+      "installed_at": "2026-04-13T10:42:35.324834"
+    },
+    {
+      "name": "news-writing",
+      "source": "news-writing-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/news-writing",
+      "installed_at": "2026-04-13T10:42:35.508596"
+    },
+    {
+      "name": "official-writing",
+      "source": "official-writing-1.0.2.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/official-writing",
+      "installed_at": "2026-04-13T10:42:35.589808"
+    },
+    {
+      "name": "patent-assistant",
+      "source": "patent-assistant-1.1.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/patent-assistant",
+      "installed_at": "2026-04-13T10:42:35.728024"
+    },
+    {
+      "name": "patent-fto",
+      "source": "patent-fto-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/patent-fto",
+      "installed_at": "2026-04-13T10:42:35.806030"
+    },
+    {
+      "name": "patent-invalid-search",
+      "source": "patent-invalid-search-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/patent-invalid-search",
+      "installed_at": "2026-04-13T10:42:35.938517"
+    },
+    {
+      "name": "patent-search",
+      "source": "patent-search-1.0.9.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/patent-search",
+      "installed_at": "2026-04-13T10:42:36.396205"
+    },
+    {
+      "name": "patent-writer",
+      "source": "patent-writer-1.1.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/patent-writer",
+      "installed_at": "2026-04-13T10:42:36.581214"
+    },
+    {
+      "name": "wechat-mp-writer",
+      "source": "wechat-mp-writer-skill-mxx-1.0.0.zip",
+      "path": "/mnt/d/Projects/Pycharm/lawyerclaw/backend/skills/wechat-mp-writer",
+      "installed_at": "2026-04-13T10:42:36.615305"
+    }
+  ],
+  "errors": []
+}

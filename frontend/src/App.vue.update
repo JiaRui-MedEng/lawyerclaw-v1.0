@@ -1,0 +1,103 @@
+# App.vue 更新说明
+
+## 问题
+右侧侧边栏使用的是 FileTreeNode 组件，只支持目录展开/折叠，不支持文件选择和发送功能。
+
+## 解决方案
+
+### 1. 在 App.vue 中导入 FileExplorer 组件
+
+找到这一行：
+```javascript
+import FileTreeNode from './components/FileTreeNode.vue'
+```
+
+修改为：
+```javascript
+import FileTreeNode from './components/FileTreeNode.vue'
+import FileExplorer from './components/FileExplorer.vue'
+```
+
+### 2. 注册组件
+
+找到：
+```javascript
+components: { FileTreeNode },
+```
+
+修改为：
+```javascript
+components: { FileTreeNode, FileExplorer },
+```
+
+### 3. 添加事件处理方法
+
+在 `methods` 对象中添加（在 `changeWorkspace()` 方法后面）：
+
+```javascript
+handleSendToChat({ message, files }) {
+  // 发送文件到对话
+  this.$store.dispatch('sendMessage', {
+    content: message,
+    files: files
+  })
+  // 切换到聊天视图
+  if (this.$route.path !== '/chat') {
+    this.$router.push('/chat')
+  }
+},
+
+handlePreviewFile(file) {
+  // 文件预览（可扩展）
+  this.$message.info(`预览文件：${file.name}`)
+}
+```
+
+### 4. 替换模板中的文件树部分
+
+找到：
+```html
+<!-- 第 3 列：文件资源管理器 (surface_container_low) -->
+<aside class="col-files">
+  <div class="files-header">
+    <span class="files-title">📁 工作空间</span>
+    <button class="btn-icon" @click="refreshFiles" title="刷新">↻</button>
+  </div>
+
+  <div class="files-path">
+    <span class="path-text">{{ workspaceRoot ? shortPath(workspaceRoot) : '未设置' }}</span>
+    <button class="btn-path" @click="changeWorkspace">修改</button>
+  </div>
+
+  <div class="file-tree" v-loading="workspaceLoading">
+    <file-tree-node
+      v-for="node in workspaceTree"
+      :key="node.name"
+      :node="node"
+      :depth="0"
+    />
+    <div v-if="workspaceTree.length === 0 && !workspaceLoading" class="empty-hint">
+      暂无文件
+    </div>
+  </div>
+</aside>
+```
+
+替换为：
+```html
+<!-- 第 3 列：文件资源管理器 (surface_container_low) -->
+<aside class="col-files">
+  <file-explorer
+    @send-to-chat="handleSendToChat"
+    @preview-file="handlePreviewFile"
+  />
+</aside>
+```
+
+## 完成！
+
+保存文件后，刷新浏览器，现在你可以：
+1. 在右侧侧边栏浏览文件
+2. 点击复选框选择多个文件
+3. 点击"发送到对话"按钮将文件路径发送到聊天
+4. AI 可以读取这些文件并进行分析

@@ -1,0 +1,221 @@
+/**
+ * 字体大小主题定义
+ * 
+ * 核心思路：
+ * 1. 以 12px 为默认基准大小
+ * 2. 所有字体使用 rem 单位（相对于 html 根字体）
+ * 3. 用户偏好（small/medium/large/xlarge）作为缩放乘子
+ * 
+ * 缩放乘子：
+ * - small = 0.9  → 12px × 0.9  = 10.8px
+ * - medium = 1.0 → 12px × 1.0  = 12px（默认）
+ * - large = 1.1  → 12px × 1.1  = 13.2px
+ * - xlarge = 1.2 → 12px × 1.2  = 14.4px
+ */
+
+/* ═══════════════════════════════════════════════════════════
+   根字体：固定基准大小
+   ═══════════════════════════════════════════════════════════ */
+
+html {
+  /* 默认基准 12px */
+  font-size: 12px;
+}
+
+/* 用户偏好缩放乘子 */
+html[data-font-size="small"] {
+  font-size: 10.8px;
+}
+
+html[data-font-size="medium"] {
+  /* 默认，12px */
+  font-size: 12px;
+}
+
+html[data-font-size="large"] {
+  font-size: 13.2px;
+}
+
+html[data-font-size="xlarge"] {
+  font-size: 14.4px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   全局字体应用 - 使用 rem 单位，不强制覆盖组件样式
+   ═══════════════════════════════════════════════════════════ */
+
+body, 
+#app,
+.layout {
+  font-size: 1rem;
+}
+
+/* 标题字体 */
+h1, .h1, .title-1 {
+  font-size: 1.75rem;
+}
+
+h2, .h2, .title-2 {
+  font-size: 1.5rem;
+}
+
+h3, .h3, .title-3 {
+  font-size: 1.25rem;
+}
+
+h4, .h4, .title-4 {
+  font-size: 1.125rem;
+}
+
+/* 小字 */
+small, .text-sm, .hint, .meta, .subtitle {
+  font-size: 0.875rem;
+}
+
+/* 按钮和输入框 */
+button, input, select, textarea {
+  font-size: 0.9375rem;
+}
+
+/* 代码块 */
+code, pre {
+  font-size: 0.875rem;
+}
+
+/* ====== Element UI 组件覆盖 ====== */
+
+/* Element UI 消息框 */
+.el-message-box {
+  font-size: 1rem;
+}
+
+.el-message-box__title {
+  font-size: 1.125rem;
+}
+
+.el-message-box__content {
+  font-size: 1rem;
+}
+
+/* Element UI 按钮 */
+.el-button {
+  font-size: 0.9375rem;
+}
+
+.el-button--small {
+  font-size: 0.8125rem;
+}
+
+.el-button--large {
+  font-size: 1.125rem;
+}
+
+/* Element UI 表单 */
+.el-form-item__label {
+  font-size: 1rem;
+}
+
+.el-input__inner {
+  font-size: 0.9375rem;
+}
+
+.el-select .el-input__inner {
+  font-size: 0.9375rem;
+}
+
+/* Element UI 表格 */
+.el-table {
+  font-size: 1rem;
+}
+
+.el-table th {
+  font-size: 1rem;
+}
+
+.el-table td {
+  font-size: 1rem;
+}
+
+/* Element UI 对话框 */
+.el-dialog {
+  font-size: 1rem;
+}
+
+.el-dialog__title {
+  font-size: 1.25rem;
+}
+
+.el-dialog__body {
+  font-size: 1rem;
+}
+
+/* Element UI 通知 */
+.el-notification {
+  font-size: 1rem;
+}
+
+.el-notification__title {
+  font-size: 1.125rem;
+}
+
+/* ====== 应用特定组件 ====== */
+
+/* 导航栏 */
+.nav-brand, .brand-text {
+  font-size: 1.15rem;
+}
+
+/* 设置页面 */
+.settings-title {
+  font-size: 1.5rem;
+}
+
+.section-title {
+  font-size: 0.9375rem;
+}
+
+.setting-label, .setting-value {
+  font-size: 1rem;
+}
+
+.setting-hint {
+  font-size: 0.875rem;
+}
+
+/* 聊天页面 */
+.chat-message {
+  font-size: 1rem;
+}
+
+.chat-input {
+  font-size: 0.9375rem;
+}
+
+/* 文件浏览器 */
+.file-tree, .file-node {
+  font-size: 1rem;
+}
+
+/* 工具提示 */
+.tooltip, .hint-text {
+  font-size: 0.875rem;
+}
+
+/* ====== 间距和尺寸也使用 rem ====== */
+
+/* 对话框宽度 */
+.el-dialog {
+  width: 40rem;
+  max-width: 90vw;
+}
+
+/* 按钮内边距 */
+.el-button {
+  padding: 0.5rem 1rem;
+}
+
+/* 输入框高度 */
+.el-input__inner {
+  height: 2.25rem;
+  line-height: 2.25rem;
+}
